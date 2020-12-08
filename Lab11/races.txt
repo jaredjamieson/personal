@@ -1,0 +1,15 @@
+JUMP, Maryland Hunt Cup, 4.0, 100000.0, Counterclockwise, turf, 3.6
+JUMP, Cheltenham Gold Cup, 26, 625000.0, Clockwise, turf, 4.0
+FLAT, Kentucky Derby, 1.25, 2000000.0, Counterclockwise, dirt
+FLAT, Epsom Derby, 12.0,2000000.0, Clockwise, turf
+FLAT, Pegasus World Cup, 1.125, 9000000.0, Counterclockwise, synthetic
+JUMP, Queen Mother Champion Chase, 7.0, 400000.0, Clockwise, turf, 4.6
+FLAT, Breeders Cup, 1.25, 6000000.0, Counterclockwise, dirt
+JUMP, Queens Cup Steeplechase, 2.75, 150000.0, Counterclockwise, turf, 4.6
+JUMP, Grand National, 34.0, 1500000.0, Clockwise, turf, 4.6
+FLAT, 2000 Guineas Stake, 8.0, 523750.0, Clockwise, dirt
+FLAT, St. Ledger Stakes, 14, 700000.0, Clockwise, dirt
+FLAT, Arkansas Derby, 1.025, 1000000.0, Counterclockwise, dirt
+JUMP, Grand National Hurdle Stakes, 2.625, 300000.0, Counterclockwise, turf, 4.6
+FLAT, Royal Lodge Stakes, 8, 125000.0, Clockwise, turf
+JUMP, Stayers Hurdle, 23, 182878.0, Clockwise, turf, 5.0
