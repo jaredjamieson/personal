@@ -1,0 +1,116 @@
+
+=== Scripts ===
+
+
+===
+#!/bin/bash
+# Script to add a user to Linux system
+if [ $(id -u) -eq 0 ]; then
+    read -p "Enter username : " username
+    read -s -p "Enter password : " password
+    egrep "^$username" /etc/passwd >/dev/null
+    if [ $? -eq 0 ]; then
+        echo "$username exists!"
+        exit 1
+    else
+        pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+        useradd -m -p $pass $username
+        [ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
+    fi
+else
+    echo "Only root may add a user to the system"
+    exit 2
+fi
+
+====
+
+#!/bin/bash  
+while true  
+do  
+#this command will run every 5  minutes
+	 whois 
+   sleep 60  #time in seconds:  1 * 60 = 60
+done
+
+====
+#!/bin/bash  
+for x in $(seq 5)
+do  
+	 echo $x
+	 who -H 
+   sleep 60  #time in seconds:  1 * 60 = 300
+done
+
+
+
+
+== Command line arguments ==
+
+#! /bin/bash
+### print total argument and their values
+echo "Total Arguments:" $#
+echo "All Arguments values:" $@
+### Command arguments can be accessed as
+echo "First->"  $1
+echo "Second->" $2
+# You can also access all arguments in an array and use them in a script.
+args=("$@")
+echo "First->"  ${args[1]} 
+echo "Second->" ${args[2]}
+
+===
+#! /bin/bash
+echo "Username: $1";
+echo "Age: $2";
+echo "Full Name: $3“;
+
+==
+#! /bin/bash
+i=1;
+for user in “$@”
+do
+	echo “username - $i: $user”;
+	i=$((i + 1));
+done
+==
+
+============ functions in shell scripts ===
+#!/bin/bash
+# A simple script with a function...
+add_a_user()
+{
+  USER=$1
+  PASSWORD=$2
+  shift; shift;
+  # Having shifted twice, the rest is now comments ...
+  COMMENTS=$@
+  echo "Adding user $USER ..."
+  echo useradd -c "$COMMENTS" $USER
+  echo passwd --stdin $USER $PASSWORD
+  echo "Added user $USER ($COMMENTS) with pass $PASSWORD"
+}
+echo "Start of script..."
+add_a_user bob Johnson Bob Holness the presenter
+
+==
+# common.lib
+STD_MSG="About to rename some files..."
+rename()
+{
+  # expects to be called as: rename .txt .bak 
+  FROM=$1
+  TO=$2
+  for i in *$FROM
+  do
+    j=`basename $i $FROM`
+    mv $i ${j}$TO
+  done
+}
+
+===
+
+#!/bin/sh
+# function2.sh
+. ./common.lib
+echo $STD_MSG
+rename .txt .bak
