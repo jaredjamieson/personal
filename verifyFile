@@ -1,0 +1,12 @@
+#! /bin/bash
+echo "Enter file:"
+read tempFile
+echo "Enter directory: "
+read tempDir 
+
+if [ -f /var/$tempDir/$tempFile ]
+   then
+      echo "/var/$tempDir/$tempFile exists."
+   else
+      echo "/var/$tempDir/$tempFile does not exist."
+fi

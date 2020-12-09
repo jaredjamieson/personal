@@ -1,0 +1,10 @@
+#! /bin/bash
+echo "Enter a number:"; read M
+echo "Enter another number:"; read R
+echo "Enter one more number:"; read T
+A=$M+$R+$T
+if [[ $A -lt 2000 ]]; then 
+	echo "A is 2000 or less."
+else 
+	echo "A is over 2000."
+fi

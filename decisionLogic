@@ -1,0 +1,13 @@
+echo -n "What is you favorite vegetable?"
+read veg_name
+if [ "$veg_name" = "Broccoli" ]
+then 
+   echo "Broccoli is a healthy choice."
+else
+   if [ "$veg_name" = "Carrots" ]
+   then 
+      echo "Carrots are great for you."
+   else
+      echo "Don't forget to eat your broccoli also."
+   fi
+fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+wordCount=`wc -w < work.txt`
+
+echo $wordCount
+
+if [ $wordCount -gt 100 ]
+then echo "Well done!"
+else echo "Not enough!"
+fi

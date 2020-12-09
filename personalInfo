@@ -1,0 +1,10 @@
+#! /bin/bash
+looptest=y
+while [ "$looptest" = y ]; do
+  echo -n "Enter Name: "; read name
+  echo -n "Enter Street: "; read street
+  echo -n "Enter City: "; read city
+  echo -n "Enter State: "; read state
+  echo -n "Enter Zip Code: "; read zip
+  echo -n "Continue? (y)es or (n)o: "; read looptest
+done

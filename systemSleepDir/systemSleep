@@ -1,0 +1,7 @@
+#!/bin/bash  
+while true  
+do  
+#this command will run every 5  minutes
+	 who >> systemSleepReport
+   sleep 60  #time in seconds:  1 * 60 = 60
+done

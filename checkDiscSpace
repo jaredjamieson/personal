@@ -1,0 +1,12 @@
+#!/bin/bash
+
+space=`df -h | awk '{print $5}' | grep % | grep -v use | sort -n | tail -l | cut -d "%" -f1 -`
+alertValue="80"
+
+if [ $space -gt $alertValue ]
+then echo "Warning!  The disk is nearly full!"
+else echo "Disk space normal."
+fi
+
+
+

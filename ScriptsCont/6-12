@@ -1,0 +1,10 @@
+tput cup $1 $2 # Place cursor on row and col
+tput clear # Clear the screen
+bold='tput smso' # Set stand-out mode - bold
+offbold='tput rmso' # Reset screen - turn off bold
+echo $bold # Turn bold on
+tput cup 10 20; echo "Type Last Name:" # Bold caption
+tput cup 12 20; echo "Type First Name:" # Bold caption
+echo $offbold # Turn bold off
+tput cup 10 41; read lastname # Enter last name
+tput cup 12 41; read firstname # Enter first name

@@ -1,0 +1,12 @@
+#! /bin/bash
+for file in file[1234]; do
+  size=`wc -c < $file`
+  if [ $size -gt 100 ]
+  then 
+	  echo "Great!"
+	  cp $file ./collection
+  else 
+	  echo "Not Enough!"
+  fi
+done
+
