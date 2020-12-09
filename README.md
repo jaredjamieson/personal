@@ -1,4 +1,7 @@
 # personal
 Contains directories of school assignments and personal projects.
 
-Projects are written in Java or Python and may include test driven development using gradle and jupiter.
+Projects include: 
+*Java
+*Python (may include test driven development using gradle and jupiter)
+*Linux Scripts
